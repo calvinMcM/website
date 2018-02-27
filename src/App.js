@@ -4,6 +4,7 @@ import './App.css';
 
 class Header extends Component {
   render(params) {
+    return (
     <nav className="navbar navbar-default navbar-top">
       <div className="container navbar-left">
           <a className="navbar-brand" data-toggle="tab" href="#about">Calvin</a>
@@ -25,6 +26,7 @@ class Header extends Component {
           </ul>
       </div>
     </nav>
+    );
   }
 }
 
