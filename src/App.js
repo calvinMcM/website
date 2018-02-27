@@ -3,10 +3,10 @@ import logo from './logo.svg';
 import './App.css';
 
 class HeaderButton extends Component{
-  render(params) {
+  render() {
     return (
       <li>
-          <a data-toggle="tab" className={params.active ? "active" : ""} href={params.ref} download>{params.name} <span className="sr-only">(current)</span></a>
+          <a data-toggle="tab" className={this.props.active ? "active" : ""} href={this.props.ref} download>{this.props.name} <span className="sr-only">(current)</span></a>
       </li>
     )
   }
@@ -20,7 +20,7 @@ class Header extends Component {
       <div className="container navbar-left">
           <a className="navbar-brand" data-toggle="tab" href="#about">Calvin</a>
           <ul className="nav navbar-nav">
-            <HeaderButton active="active" ref="#about" name="About"></HeaderButton>
+            <HeaderButton active="active" ref="#about" name="About"/>
             <li>
                 <a data-toggle="tab" href="#pro" download>Hire Me <span className="sr-only">(current)</span></a>
             </li>
