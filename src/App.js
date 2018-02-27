@@ -2,6 +2,17 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+class HeaderButton extends Component{
+  render(params) {
+    return (
+      <li>
+          <a data-toggle="tab" className={params.active ? "active" : ""} href={params.ref} download>{params.name} <span className="sr-only">(current)</span></a>
+      </li>
+    )
+  }
+
+}
+
 class Header extends Component {
   render(params) {
     return (
@@ -9,9 +20,7 @@ class Header extends Component {
       <div className="container navbar-left">
           <a className="navbar-brand" data-toggle="tab" href="#about">Calvin</a>
           <ul className="nav navbar-nav">
-            <li>
-                <a data-toggle="tab" className="active" href="#about" download>About <span className="sr-only">(current)</span></a>
-            </li>
+            <HeaderButton active="active" ref="#about" name="About"></HeaderButton>
             <li>
                 <a data-toggle="tab" href="#pro" download>Hire Me <span className="sr-only">(current)</span></a>
             </li>
